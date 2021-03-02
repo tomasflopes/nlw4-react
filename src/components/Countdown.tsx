@@ -17,13 +17,12 @@ const Countdown: React.FC = () => {
   }
 
   useEffect(() => {
-    console.log(minutes);
     if (countdownActive && time > 0) {
       setTimeout(() => {
         setTime(currentTime => currentTime - 1);
       }, 1000);
     }
-  }, []);
+  }, [countdownActive, time]);
 
   return (
     <div>
